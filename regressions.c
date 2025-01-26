@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include<math.h>
-
 #include <stdio.h>
 #include <math.h>
-
 void gradient_descent(double x[], double y[], int n, double learning_rate, int iterations) {
     double a = 0; // Pente initiale
     double b = 0; // Ordonnée initiale
