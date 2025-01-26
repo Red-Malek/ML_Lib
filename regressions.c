@@ -6,7 +6,7 @@
 #define MAX_SIZE 5
 
 
-
+// on definie la regression lineaire par la pente de la drooite (slope) et l'oordonnée a l'origine (intercept)
 typedef struct {
     double slope;
     double intercept;
