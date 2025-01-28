@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define PAS 0.01
-#define MAX_SIZE 5
+#define MAX_SIZE 1000
 
 
 // on definie la regression lineaire par la pente de la drooite (slope) et l'oordonnée a l'origine (intercept)
