@@ -6,7 +6,7 @@
 #define MAX_SIZE 1000
 
 
-// on definie la regression lineaire par la pente de la drooite (slope) et l'oordonnée a l'origine (intercept)
+// on definit la regression lineaire par la pente de la drooite (slope) et l'oordonnée a l'origine (intercept)
 typedef struct {
     double slope;
     double intercept;
@@ -25,7 +25,7 @@ long double SSE(float a ,float b,double *x,double *y,int n)
 }
 
 
-
+//cette fonction calcule la derivee rar rapport a la pente a  de la fonction sommme de erreurs carrés:
 float derivee_prprt_a(float a,float b,double *x,double *y,int n)
 {
     float d=0;
@@ -37,7 +37,7 @@ float derivee_prprt_a(float a,float b,double *x,double *y,int n)
 }
 
 
-
+//cette fonction calcule la derivee rar rapport a l'oordonnee a l'oriine b   de la fonction sommme de erreurs carrés:
 float derivee_prprt_b(float a,float b,double *x,double *y,int n)
 {
     float d=0;
@@ -49,7 +49,13 @@ float derivee_prprt_b(float a,float b,double *x,double *y,int n)
 }
 
 
-
+/* 
+Principe de la fonction :
+a chaque iteration on calcule la derivee par rapport au slope A(i)
+puis A(i+1) ,varie A jusqu'a le signe du produit A(i)*A(i+1)<=0
+d'ou l'erreur est minimal .
+de meme pour B :
+*/
 void Linear_regression(double *x,double *y,linear_regression *reg,int n)
 {
     srand(time(0)); 
